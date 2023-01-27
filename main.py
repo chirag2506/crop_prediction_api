@@ -7,9 +7,6 @@ app = FastAPI()
 configFile = "config/app.setting.json"
 configuration = readJson(configFile)
 
-def hello():
-    return "hello"
-
 @app.get("/")
 async def default():
     return JSONResponse({
